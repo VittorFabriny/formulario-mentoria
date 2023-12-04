@@ -1,4 +1,4 @@
-# desafio05-formulario
+# desafio06-formulario
 
 <h2>Introdução</h2>
 
@@ -8,7 +8,7 @@ Durante o curso, aprendi não apenas os conceitos básicos de criação de formu
 
 <h2>Sobre o Projeto</h2>
 
-O projeto consiste em um formulário de contato responsivo para um site fictício de uma agência de Eventos. O objetivo era criar um formulário que fosse atraente visualmente e de fácil utilização.
+O projeto consiste em um formulário de contato para um site fictício de uma agência de Eventos. O objetivo era criar um formulário que fosse atraente visualmente e de fácil utilização.
 
 <h2>Recursos Destacados</h2>
 
