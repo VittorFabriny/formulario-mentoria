@@ -3,136 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crie seu evento</title>
 
     <link rel="stylesheet" href="style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    K
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=JetBrains+Mono:wght@500;700&family=Open+Sans:wght@400;700&family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+
+    <title>Mentoria</title>
   </head>
+
   <body>
     <div class="page">
       <header>
-        <h1>Crie e compartilhe seu evento.</h1>
-        <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+        <h1>Mentoria</h1>
+        <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
       </header>
 
       <form id="my-form">
         <fieldset>
           <div class="fieldset-wrapper">
-            <legend>Informações do Evento</legend>
+            <legend>Informações Pessoais</legend>
 
             <div class="input-wrapper">
-              <label for="event-title"
-                >Título do Evento <span>(mínimo 8 caracteres)</span>
-                <input type="text" id="event-title" required minlength="8"
-              /></label>
+              <label for="person-name"
+                >Nome
+                <input type="text" id="person-name" required />
+              </label>
+
+              <div class="input-wrapper">
+                <label for="person-lname"
+                  >Sobrenome
+                  <input type="text" id="person-lname" required />
+                </label>
+              </div>
             </div>
 
             <div class="input-wrapper">
-              <label for="event-url"
-                >Link do Evento <span>comece com http://</span>
-                <input type="text" id="event-url" required
-              /></label>
-            </div>
-
-            <div class="input-wrapper">
-              <label for="event-whatsapp"
-                >Whatsapp para contato<span>(somente números)</span>
-                <input type="number" id="event-whatsapp" required
-              /></label>
-            </div>
-
-            <div class="input-wrapper">
-              <label for="event-info"
-                >Informações extra
-                <textarea id="event-info"></textarea>
+              <label for="person-email"
+                >Email <span>(digite um email válido)</span>
+                <input type="email" id="person-email" required />
               </label>
             </div>
 
             <div class="input-wrapper">
-              <label for="event-category"
-                >Categoria
-                <select name="" id="event-category">
-                  <option value="live">Ao vivo</option>
-                  <option value="podcast">Podcast</option>
-                  <option value="mentorship">Mentoria</option>
-                </select>
+              <label for="person-password"
+                >Senha <span>(mínimo de 6 caracteres)</span>
+                <input type="password" id="person-password" required />
               </label>
             </div>
           </div>
         </fieldset>
 
         <fieldset>
-            <div class="fieldset-wrapper">
-              <legend>Privacidade do Evento</legend>
+          <div class="fieldset-wrapper">
+            <legend>Informações do Mentor</legend>
 
-              <div class="input-wrapper">
-                <label for="event-email"
-                  >Email do administrador<span>(digite um email válido)</span>
-                  <input type="text" id="event-email" required
-                /></label>
-              </div>
-
-              <div class="input-wrapper">
-                <label for="event-password"
-                  >Senha de acesso para os participantes<span
-                    >(mínimo 8 caracteres)</span
-                  >
-                  <input type="password" id="event-password" required minlength="8"
-                /></label>
-              </div>
-
-              <div class="checkbox-wrapper">
-                <input type="checkbox" id="event-private"/>
-                <label for="event-private">Evento privado
-                </label>
-              </div>
+            <div class="input-wrapper">
+              <label for="mentor-name"
+                >Nome do seu Mentor <span>(só o primeiro nome)</span>
+                <input type="text" id="mentor-name" required />
+              </label>
             </div>
+          </div>
         </fieldset>
 
         <fieldset>
-            <div class="fieldset-wrapper">
-              <legend>Dia e Hora</legend>
+          <div class="fieldset-wrapper">
+            <legend>Seus Horários Disponíveis</legend>
 
-              <div class="col-3">
+            <div class="input-wrapper date-wrapper">
+              <div class="section">
+                <h1>Primeira Mentoria</h1>
 
-                <div class="input-wrapper">
-                  <label for="event-date"
-                  >Data</span>
-                  <input type="date" id="event-date" required
-                  /></label>
+                <div class="col3">
+                  <div class="input-wrapper">
+                    <label for="first-date"
+                      >Data <span>(dd/mm/aaaa)</span>
+                      <input type="date" id="first-date" class="input-date" />
+                    </label>
+                  </div>
+
+                  <div class="time-wrapper">
+                    <div class="input-wrapper">
+                      <label for="first-tstart"
+                        >Das
+                        <input type="time" id="first-tstart"
+                        class="input-time" />
+                      </label>
+                    </div>
+
+                    <div class="input-wrapper">
+                      <label for="first-tfinish"
+                        >Até
+                        <input type="time" id="first-tfinish"
+                        class="input-time" />
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                
-                <div class="input-wrapper">
-                  <label for="event-begin"
-                  >Das
-                  <input type="time" id="event-begin" required
-                  /></label>
-                </div>
-                
-                <div class="input-wrapper">
-                  <label for="event-end"
-                  >Até
-                  <input type="time" id="event-end" required
-                  /></label>
+              </div>
+
+              <div class="section">
+                <h1>Segunda Mentoria</h1>
+
+                <div class="col3">
+                  <div class="input-wrapper">
+                    <label for="second-date"
+                      >Data <span>(dd/mm/aaaa)</span>
+                      <input type="date" id="second-date" class="input-date" placeholder=""/>
+                    </label>
+                  </div>
+
+                  <div class="time-wrapper">
+                    <div class="input-wrapper">
+                      <label for="second-tstart"
+                        >Das
+                        <input type="time" id="second-tstart" class="input-time" />
+                      </label>
+                    </div>
+
+                    <div class="input-wrapper">
+                      <label for="second-tfinish"
+                        >Até
+                        <input type="time" id="second-tfinish"
+                        class="input-time" />
+                      </label>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
         </fieldset>
       </form>
 
-      
       <footer>
-        
-        <input class="button" type="submit" form="my-form" value="Salvar evento">
-        
+        <input class="button" type="submit" form="my-form" value="Salvar">
       </footer>
+
+      
     </div>
+
   </body>
 </html>
